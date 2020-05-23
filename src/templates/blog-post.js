@@ -12,11 +12,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext
    
   return (
-    
-  
-  
-  
-    
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
@@ -54,7 +49,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         
         <footer>
        
-                          
+        <script defer
+  src="http://commento.example.com/js/commento.js"
+  data-css-override="http://example.com/my-custom-styling.css"
+  data-auto-init="true">
+</script>
+<div id="commento"></div>
 
   
         </footer>
