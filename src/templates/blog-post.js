@@ -1,16 +1,20 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
+import { Link, graphql, prefetchPathname } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-
+import { DiscussionEmbed } from "disqus-react"
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
    
+  const disqusConfig = {
+    shortname: "monolithicstories",
+    config: { identifier: post.h1},
+  }
+ 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -48,17 +52,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         
         <footer>
-       
-        <script defer
-  src="http://commento.example.com/js/commento.js"
-  data-css-override="http://example.com/my-custom-styling.css"
-  data-auto-init="true">
-</script>
-<div id="commento"></div>
-
-  
-        </footer>
+    
+         </footer>
         
+
       </article>
 
       <nav>
@@ -90,6 +87,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
+        Feel free to comment your views...
+        <br></br>
+        <DiscussionEmbed {...disqusConfig} />
       </nav>
     </Layout>
   )
