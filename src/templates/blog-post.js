@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
    
   const disqusConfig = {
     shortname: "monolithicstories",
-    config: { identifier: post.h1},
+    config: { identifier: post.frontmatter.Layout},
   }
  
   return (
@@ -87,7 +87,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
-        Feel free to comment your views...
+        Please let me know your thoughts or comments on this post.....
         <br></br>
         <DiscussionEmbed {...disqusConfig} />
       </nav>
