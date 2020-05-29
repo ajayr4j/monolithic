@@ -52,6 +52,14 @@ const Layout = ({ location, title, children }) => {
     )
   }
   return (
+    
+<Helmet
+    title={data.site.siteMetadata.title}
+    meta={[
+    
+    { name: 'google-site-verification', content: 'UNJme_mrn-2aCsk6mgV3wLZTxopTGSewtduyexH0sjY' }
+    ]}
+/>
     <div
       style={{
         marginLeft: `auto`,
