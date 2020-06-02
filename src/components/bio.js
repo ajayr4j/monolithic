@@ -66,12 +66,6 @@ const Bio = () => {
       <p>
         <strong>{author.name}</strong><br></br>{author.summary}<br></br>
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}style={{ textDecoration: 'none', color: 'white' }}>
-         <img src = {mainLogo} width = "20" height = "20" border-radius = "50" />
-        </a>
-        <a href={`https://instagram.com/${social.instagram}`}style={{ textDecoration: 'none', color: 'white' }}>
-         <img src = {mainLogo1} width = "30" height = "20" border-radius = "50" />
-        </a>
         <a href={`https://github.com/${social.github}`}style={{ textDecoration: 'none', color: 'white' }}>
          <img src = {mainLogo2} width = "20" height = "20" border-radius = "50" />
         </a>
